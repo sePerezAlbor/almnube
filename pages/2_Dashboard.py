@@ -10,7 +10,7 @@ st.title('Dashboard de Accidentes en Barranquilla')
 # --- Función para cargar datos con caché de 5 minutos ---
 @st.cache_data(ttl=300)
 def cargar_datos_desde_mongo():
-    url = "mongodb+srv://perezalborsebastian:RHoAddewAZXIFILD@cluster0.klofmwq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&connectTimeoutMS=30000&socketTimeoutMS=30000"
+    url = "mongodb+srv://perezalborsebastian:RHoAddewAZXIFILD@cluster0.klofmwq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&connectTimeoutMS=600000&socketTimeoutMS=600000"
     client = MongoClient(url)
     db = client['proyecto_personal']
     coleccion = db['Accidentedes_Barranquilla_victimas.csv']
